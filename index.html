@@ -9,7 +9,13 @@
     <title>身份证生成器</title>
 
 
-        <style type="text/css">
+
+    <style type="text/css">
+
+        input::-webkit-input-placeholder {
+            color: #ccc;
+        }
+
         @font-face {
             font-family: 'SFZ'; /字体名称/
 
@@ -28,11 +34,6 @@
         }
         .fontclass2 {
             font-family:'name';
-        }
-
-        .center{
-
-
         }
 
     </style>
@@ -57,17 +58,12 @@
 
 
 
-
-
-
-
-
 <body>
 
 <div style=" position: absolute; letter-spacing: 0px;top: 120;left: 25px;">
 
 <input placeholder="请输入姓名"
-       style="width: 200px;/*姓名*/
+       style="border: 1px solid #ccc;width: 200px;/*姓名*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
@@ -76,7 +72,7 @@
 
 
 <input placeholder="请输入性别"
-       style="width: 200px;/*性别:*/
+       style="border: 1px solid #ccc;width: 200px;/*性别:*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
@@ -84,17 +80,15 @@
     <br><br>
 
 
-
 <input placeholder="请输入身份号码"
-       style="width: 200px;/*身份号码:*/
+       style="border: 1px solid #ccc;width: 200px;/*身份号码:*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
     margin: 5px auto;" type="text" id="id-input" name="id" value="" />
     <br> <br>
 
-
-<button style="width: 200px;/*按钮*/
+<button style="border: 0px solid #ccc;width: 200px;/*按钮*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
@@ -111,8 +105,6 @@
     </div>
 </div>
 
-
 </body>
-
 
 </html>
