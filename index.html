@@ -32,7 +32,7 @@
 
         .center{
 
-            
+
         }
 
     </style>
@@ -64,42 +64,44 @@
 
 <body>
 
-姓&ensp;&ensp;&ensp;&nbsp;名:
-<input style="width: 280px;
+<div style=" position: absolute; letter-spacing: 0px;top: 120;left: 25px;">
+
+<input placeholder="请输入姓名"
+       style="width: 200px;/*姓名*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
     margin: 5px auto;" type="text" id="name-input" name="name" value="" />
-<br>
+    <br><br>
 
-性&ensp;&ensp;&ensp;&nbsp;别:
-<input style="width: 280px;
+
+<input placeholder="请输入性别"
+       style="width: 200px;/*性别:*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
     margin: 5px auto;" type="text" id="sex-input" name="sex" value="" />
-<br>
+    <br><br>
 
 
-身份号码:
-<input style="width: 280px;
+
+<input placeholder="请输入身份号码"
+       style="width: 200px;/*身份号码:*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
     margin: 5px auto;" type="text" id="id-input" name="id" value="" />
-<br>
+    <br> <br>
 
-<span style=margin:70px >
-<button style="width: 280px;
+
+<button style="width: 200px;/*按钮*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
     margin: 5px auto;background-color:#4C86FA;color:#FFFFFF" onclick="setVale()" value="生成" >生成</button>
-    </span>
-<br>
-<br>
+</div>
 
-<div class="center" style=" position: relative; color:#575757">
+<div style=" position: relative; letter-spacing: 0px;top: 0;left: 200px;color:#575757">
     <img src="sfz.png" alt="身份证图片"/>
     <div class="fontclass2"><span id="name" style="position: absolute;font-size: 33px;letter-spacing: 0px;top: 115;left: 235; ">汤婷秀</span></div>
     <div class="fontclass2"><span id="sex" style="position: absolute;font-size: 30px;top:190;left:235;"  >女</span></div>
