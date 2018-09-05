@@ -13,7 +13,7 @@
     <style type="text/css">
 
         input::-webkit-input-placeholder {
-            color: #ccc;
+            color: #BDBDBD;
         }
 
         @font-face {
@@ -38,6 +38,8 @@
 
     </style>
 
+
+
     <script >
         function setVale()
         {
@@ -54,89 +56,14 @@
             id.innerHTML =idInput.value ;
         }
     </script>
-<<<<<<< HEAD
 
-
-    <!--// 下面是按钮效果-->
-    <link rel="stylesheet" type="text/css" href="./css/waves.min.css?v=0.7.2">
-    <style>
-        /*#colored-button .btn {*/
-        /*}*/
-
-        /*#colored-button a,*/
-        /*#colored-button a:{*/
-            /*background: ;*/
-        /*}*/
-
-        /*#colored-button button,*/
-        /*#colored-button button: {*/
-            /*background: ;*/
-        /*}*/
-
-        /*#colored-button input,*/
-        /*#colored-button input:{*/
-            /*background:;*/
-        /*}*/
-    </style>
-    <p id="colored-button" class="text-center">
-        <a class="btn float-buttons waves-effect waves-float">  </a>
-        <!--<button class="btn float-button-light waves-effect waves-button waves-float waves-light">  </button>-->
-        <i class="btn float-buttons waves-input-wrapper waves-effect waves-button waves-float" style="">
-            <!--<input class="waves-button-input" type="" value="" style="background-color: "> -->
-        </i>
-    </p>
-    <script type="text/javascript">
-        Waves.attach('.flat-buttons', ['waves-button']);
-        Waves.attach('.float-buttons', ['waves-button', 'waves-float']);
-        Waves.attach('.float-button-light', ['waves-button', 'waves-float', 'waves-light']);
-    </script>
-    <script type="text/javascript" src="./js/waves.min.js?v=0.7.1"></script>
-    <!-- jQuery  -->
-    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-    <script type="text/javascript">
-        var currentRoute = false;
-        $(document).on('ready', function () {
-
-            // Init Waves
-            Waves.init();
-            Waves.attach('.drag-ripple', 'waves-block', true);
-            Waves.attach('#bg-pattern', null, true);
-            init();
-            $(window).on('hashchange', routing);
-            /**
-             * Example source code click
-             */
-            $('#example .top-button').on('click', function () {
-                var type = $(this).data('code');
-                $('#source-code .box .code').addClass('hide');
-                $('#source-code .box #code-' + type).removeClass('hide');
-                $('#source-code').removeClass('hide');
-                setTimeout(function () {
-                    $('#source-code').addClass('show');
-                }, 50);
-            });
-            $('#source-code .top-button').on('click', function () {
-
-                $('#source-code').removeClass('show');
-
-                setTimeout(function () {
-                    $('#source-code .box .code').addClass('hide');
-                    $('#source-code').addClass('hide');
-                }, 500);
-            });
-        });
-2
-    </script>
-
-=======
->>>>>>> parent of 94a9c6e... 身份证
 </head>
 
 
 
 <body>
 
-<div style=" position: absolute; letter-spacing: 0px;top: 120;left: 25px;">
+<div style=" position: absolute; letter-spacing: 0px;top: 130;left: 25px;">
 
 <input placeholder="请输入姓名"
        style="border: 1px solid #ccc;width: 200px;/*姓名*/
@@ -164,17 +91,11 @@
     margin: 5px auto;" type="text" id="id-input" name="id" value="" />
     <br> <br>
 
-<button id="colored-button"
-        class="btn float-buttons waves-effect waves-button waves-float"
-        style="border: 0px solid #ccc;width: 200px;/*按钮*/
+<button style="border: 0px solid #ccc;width: 200px;/*按钮*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
-<<<<<<< HEAD
-    margin: 5px auto;padding-top:11px;background-color:#4C86FA;color:#FFFFFF" onclick="setVale()" value="生成" >生成 &nbsp&nbsp </button>
-=======
-    margin: 5px auto;background-color:#4C86FA;color:#FFFFFF" onclick="setVale()" value="生成" >生成</button>
->>>>>>> parent of 94a9c6e... 身份证
+    margin: 5px auto;background-color:#4C86FA;color:#FFFFFF" onclick="setVale()" value="生成" >生成 &nbsp&nbsp </button>
 </div>
 
 <div style=" position: relative; letter-spacing: 0px;top: 0;left: 200px;color:#575757">
