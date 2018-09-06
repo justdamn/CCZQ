@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>身份证生成器</title>
-
+    <link rel="styleSheet" href="./animate.css" type="text/css">
 
 
     <style type="text/css">
@@ -91,15 +91,23 @@
     margin: 5px auto;" type="text" id="id-input" name="id" value="" />
     <br> <br>
 
-<button style="border: 0px solid #ccc;width: 200px;/*按钮*/
+<button class="bubbly-button"
+        style="z-index: 100;border: 0px solid #ccc;width:200px;/*按钮*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
-    margin: 5px auto;background-color:#4C86FA;color:#FFFFFF" onclick="setVale()" value="生成" >生成 &nbsp&nbsp </button>
+    margin: 5px auto;background-color:#4C86FA;color:#FFFFFF" onclick="setVale()" value="生成" >生成&nbsp&nbsp</button>
+
+    <script src="./animate.js"></script>
 </div>
 
-<div style=" position: relative; letter-spacing: 0px;top: 0;left: 200px;color:#3C3C3C">
-    <img src="sfz.png" alt="身份证图片"/>
+
+
+
+
+
+<div style=" position: relative; letter-spacing: 0px;top: 0;left: 200px;color:#3c3c3c">
+    <img style="z-index: -2000" src="sfz.png" alt="身份证图片"/>
     <div class="fontclass2"><span id="name" style="position: absolute;font-size: 33px;letter-spacing: 0px;top: 115;left: 235; ">汤婷秀</span></div>
     <div class="fontclass2"><span id="sex" style="position: absolute;font-size: 30px;top:190;left:235;"  >女</span></div>
     <div><span style="position: absolute;font-size: 30px; top: 268px; left: 235px;"><p hidden="hidden">1994</p></span></div>
