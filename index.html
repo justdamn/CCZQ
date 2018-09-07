@@ -12,6 +12,7 @@
 
     <style type="text/css">
 
+
         input::-webkit-input-placeholder {
             color: #BDBDBD;
         }
@@ -19,99 +20,101 @@
         @font-face {
             font-family: 'SFZ'; /字体名称/
 
-         url('OCR-B.ttf');
-        src: url('OCR-B.ttf');
+        url('OCR-B.ttf');
+            src: url('OCR-B.ttf');
         }
+
         .fontclass {
-            font-family:  'SFZ';
+            font-family: 'SFZ';
         }
 
         @font-face {
-            font-family:'name'; /字体名称/
+            font-family: 'name'; /字体名称/
 
         url('SourceHan.otf');
-        src: url('SourceHan.otf');
+            src: url('SourceHan.otf');
         }
+
         .fontclass2 {
-            font-family:'name';
+            font-family: 'name';
         }
 
     </style>
 
 
-
-    <script >
-        function setVale()
-        {
+    <script>
+        function setVale() {
             var name = document.getElementById("name");
             var nameInput = document.getElementById("name-input");
-            name.innerHTML =nameInput.value ;
+            name.innerHTML = nameInput.value;
 
             var sex = document.getElementById("sex");
             var sexInput = document.getElementById("sex-input");
-            sex.innerHTML =sexInput.value ;
+            sex.innerHTML = sexInput.value;
 
             var id = document.getElementById("id");
             var idInput = document.getElementById("id-input");
-            id.innerHTML =idInput.value ;
+            id.innerHTML = idInput.value;
         }
+
     </script>
 
 </head>
-
 
 
 <body>
 
 <div style=" position: absolute; letter-spacing: 0px;top: 130;left: 25px;">
 
-<input placeholder="请输入姓名"
-       style="border: 1px solid #ccc;width: 200px;/*姓名*/
+    <input placeholder="请输入姓名"
+           style="border: 1px solid #ccc;width: 200px;/*姓名*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
-    margin: 5px auto;" type="text" id="name-input" name="name" value="" />
+    margin: 5px auto;" type="text" id="name-input" name="name" value=""/>
     <br><br>
 
 
-<input placeholder="请输入性别"
-       style="border: 1px solid #ccc;width: 200px;/*性别:*/
+    <input placeholder="请输入性别"
+           style="border: 1px solid #ccc;width: 200px;/*性别:*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
-    margin: 5px auto;" type="text" id="sex-input" name="sex" value="" />
+    margin: 5px auto;" type="text" id="sex-input" name="sex" value=""/>
     <br><br>
 
 
-<input placeholder="请输入身份号码"
-       style="border: 1px solid #ccc;width: 200px;/*身份号码:*/
+    <input placeholder="请输入身份号码"
+           style="border: 1px solid #ccc;width: 200px;/*身份号码:*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
-    margin: 5px auto;" type="text" id="id-input" name="id" value="" />
+    margin: 5px auto;" type="text" id="id-input" name="id" value=""/>
     <br> <br>
 
-<button class="bubbly-button"
-        style="z-index: 100;border: 0px solid #ccc;width:200px;/*按钮*/
+    <button class="bubbly-button"
+            style="z-index: 100;border: 0px solid #ccc;width:200px;/*按钮*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
-    margin: 5px auto;background-color:#4C86FA;color:#FFFFFF" onclick="setVale()" value="生成" >生成&nbsp&nbsp</button>
+    margin: 5px auto;background-color:;color:#FFFFFF" onclick="setVale()" value="生成">生成&nbsp&nbsp
+    </button>
 
-    <script src="./animate.js"></script>
 </div>
 
-
-
-
+<script src="./animate.js"></script>
 
 
 <div style=" position: relative; letter-spacing: 0px;top: 0;left: 200px;color:#3c3c3c">
     <img style="z-index: -2000" src="sfz.png" alt="身份证图片"/>
-    <div class="fontclass2"><span id="name" style="position: absolute;font-size: 33px;letter-spacing: 0px;top: 115;left: 235; ">汤婷秀</span></div>
-    <div class="fontclass2"><span id="sex" style="position: absolute;font-size: 30px;top:190;left:235;"  >女</span></div>
-    <div><span style="position: absolute;font-size: 30px; top: 268px; left: 235px;"><p hidden="hidden">1994</p></span></div>
-    <div><span style="position: absolute;font-size: 30px; top: 344px; left: 235px;"><p hidden="hidden">广东省 深圳市 南山区</p></span></div>
+    <div class="fontclass2"><span id="name"
+                                  style="position: absolute;font-size: 33px;letter-spacing: 0px;top: 115;left: 235; ">汤婷秀</span>
+    </div>
+    <div class="fontclass2"><span id="sex" style="position: absolute;font-size: 30px;top:190;left:235;">女</span></div>
+    <div><span style="position: absolute;font-size: 30px; top: 268px; left: 235px;"><p hidden="hidden">1994</p></span>
+    </div>
+    <div><span style="position: absolute;font-size: 30px; top: 344px; left: 235px;"><p
+            hidden="hidden">广东省 深圳市 南山区</p></span></div>
     <div class="fontclass"><span id="id" style="position: absolute;font-size: 45px;top: 533;left: 370;color: #575757;">130531198302111820</span>
     </div>
 </div>
