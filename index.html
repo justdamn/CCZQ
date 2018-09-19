@@ -12,6 +12,10 @@
 
     <style type="text/css">
 
+        a:active {
+            transform: scale(0.9);
+            background-color:;
+        }
 
         input::-webkit-input-placeholder {
             color: #BDBDBD;
@@ -57,6 +61,16 @@
             id.innerHTML = idInput.value;
         }
 
+        // function changeImg() {
+        //     var obj = document.getElementById("changeImg");
+        //     if (obj.getAttribute("src") == "sfz.png") {
+        //         obj.setAttribute("src", "sfzbg.png");
+        //     } else {
+        //         obj.setAttribute("src", "sfz.png");
+        //     }
+        //
+        // }
+
     </script>
 
 </head>
@@ -99,6 +113,11 @@
     text-indent: 10px; /*里面隐形的字体首行缩进*/
     margin: 5px auto;background-color:;color:#FFFFFF" onclick="setVale()" value="生成">生成&nbsp&nbsp
     </button>
+    <br> <br>
+
+    <!--<a style="color:#306CFF;position: absolute;text-decoration:underline;left:66px;font-size: 13px;"-->
+       <!--onclick="changeImg();javascript:this.innerHTML=(this.innerHTML=='切换成背面'?'切换成正面':'切换成背面');">切换成背面</a>-->
+
 
 </div>
 
@@ -106,9 +125,9 @@
 
 
 <div style=" position: relative; letter-spacing: 0px;top: 0;left: 200px;color:#3c3c3c">
-    <img style="z-index: -2000" src="sfz.png" alt="身份证图片"/>
+    <img style="z-index: -2000" src="sfz.png" id="changeImg" alt="身份证图片"/>
     <div class="fontclass2"><span id="name"
-                                  style="position: absolute;font-size: 33px;letter-spacing: 0px;top: 115;left: 235; ">汤婷秀</span>
+                                  style="position: absolute;font-size: 33px;letter-spacing:0px;top:115;left:235; ">汤婷秀</span>
     </div>
     <div class="fontclass2"><span id="sex" style="position: absolute;font-size: 30px;top:190;left:235;">女</span></div>
     <div><span style="position: absolute;font-size: 30px; top: 268px; left: 235px;"><p hidden="hidden">1994</p></span>
@@ -118,6 +137,7 @@
     <div class="fontclass"><span id="id" style="position: absolute;font-size: 45px;top: 533;left: 370;color: #575757;">130531198302111820</span>
     </div>
 </div>
+<img style="position: relative;left: 200px;z-index: -2000" src="sfzbg.png" alt="身份证背面图片"/>
 
 </body>
 
