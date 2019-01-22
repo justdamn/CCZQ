@@ -63,25 +63,15 @@
 
 
           var sv = document.getElementById("validitystart-input").value;
-          var ev = document.getElementById("validityend-input").value;
           var rsv, rev;
           if(sv.length == 8)
             rsv = sv.slice(0,4) + "." + sv.slice(4,6) + "." + sv.slice(6,8);
           else
             rsv = document.getElementById("validitystart-input").value.replace(/-|\//g, ".");
 
-          if(ev.length == 8)
-            rev = ev.slice(0,4) + "." + ev.slice(4,6) + "." + ev.slice(6,8);
-          else
-            rev = document.getElementById("validityend-input").value.replace(/-|\//g, ".");
-          document.getElementById("validity").innerHTML = rsv + "—" + rev;
-
-
-
-
-
-
-
+          var endYear = parseInt(rsv.slice(0,4));
+          endYear += 20;
+          document.getElementById("validity").innerHTML = rsv + "—" + endYear + rsv.slice(4,10);
 
         }
 
@@ -142,14 +132,6 @@
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
     margin: 5px auto;" type="text" id="validitystart-input" name="id" value=""/>
-    <br> <br>
-
-    <input placeholder="有效止期"
-           style="border: 1px solid #ccc;width: 200px;/*身份号码:*/
-    height: 38px;
-    border-radius: 10px; /*圆角矩形*/
-    text-indent: 10px; /*里面隐形的字体首行缩进*/
-    margin: 5px auto;" type="text" id="validityend-input" name="id" value=""/>
     <br> <br>
 
     <button class="bubbly-button"
