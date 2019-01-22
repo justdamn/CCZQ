@@ -48,17 +48,41 @@
 
     <script>
         function setVale() {
-            var name = document.getElementById("name");
-            var nameInput = document.getElementById("name-input");
-            name.innerHTML = nameInput.value;
 
-            var sex = document.getElementById("sex");
-            var sexInput = document.getElementById("sex-input");
-            sex.innerHTML = sexInput.value;
+          var idnumber = document.getElementById("idnumber-input").value;
 
-            var id = document.getElementById("id");
-            var idInput = document.getElementById("id-input");
-            id.innerHTML = idInput.value;
+          document.getElementById("name").innerHTML = document.getElementById("name-input").value;
+          document.getElementById("sex").innerHTML = idnumber.slice(16,17) % 2 == 0 ? "女" : "男";
+          // 430105199205090522
+          document.getElementById("birthyear").innerHTML = idnumber.slice(6,10);
+          document.getElementById("birthmonth").innerHTML = idnumber.slice(10,11) == "0" ? idnumber.slice(11,12) : idnumber.slice(10,12);
+          document.getElementById("birthday").innerHTML = idnumber.slice(12,13) == "0" ? idnumber.slice(13,14) : idnumber.slice(12,14);
+          document.getElementById("address").innerHTML = document.getElementById("address-input").value;
+          document.getElementById("idnumber").innerHTML = document.getElementById("idnumber-input").value;
+          document.getElementById("signoffice").innerHTML = document.getElementById("signoffice-input").value;
+
+
+          var sv = document.getElementById("validitystart-input").value;
+          var ev = document.getElementById("validityend-input").value;
+          var rsv, rev;
+          if(sv.length == 8)
+            rsv = sv.slice(0,4) + "." + sv.slice(4,6) + "." + sv.slice(6,8);
+          else
+            rsv = document.getElementById("validitystart-input").value.replace(/-|\//g, ".");
+
+          if(ev.length == 8)
+            rev = ev.slice(0,4) + "." + ev.slice(4,6) + "." + ev.slice(6,8);
+          else
+            rev = document.getElementById("validityend-input").value.replace(/-|\//g, ".");
+          document.getElementById("validity").innerHTML = rsv + "—" + rev;
+
+
+
+
+
+
+
+
         }
 
         // function changeImg() {
@@ -88,22 +112,44 @@
     margin: 5px auto;" type="text" id="name-input" name="name" value=""/>
     <br><br>
 
-
-    <input placeholder="请输入性别"
-           style="border: 1px solid #ccc;width: 200px;/*性别:*/
-    height: 38px;
-    border-radius: 10px; /*圆角矩形*/
-    text-indent: 10px; /*里面隐形的字体首行缩进*/
-    margin: 5px auto;" type="text" id="sex-input" name="sex" value=""/>
-    <br><br>
-
-
     <input placeholder="请输入身份号码"
            style="border: 1px solid #ccc;width: 200px;/*身份号码:*/
     height: 38px;
     border-radius: 10px; /*圆角矩形*/
     text-indent: 10px; /*里面隐形的字体首行缩进*/
-    margin: 5px auto;" type="text" id="id-input" name="id" value=""/>
+    margin: 5px auto;" type="text" id="idnumber-input" name="id" value=""/>
+    <br> <br>
+
+    <input placeholder="请输入住址"
+           style="border: 1px solid #ccc;width: 200px;/*身份号码:*/
+    height: 38px;
+    border-radius: 10px; /*圆角矩形*/
+    text-indent: 10px; /*里面隐形的字体首行缩进*/
+    margin: 5px auto;" type="text" id="address-input" name="id" value=""/>
+    <br> <br>
+
+    <input placeholder="签发机关"
+           style="border: 1px solid #ccc;width: 200px;/*身份号码:*/
+    height: 38px;
+    border-radius: 10px; /*圆角矩形*/
+    text-indent: 10px; /*里面隐形的字体首行缩进*/
+    margin: 5px auto;" type="text" id="signoffice-input" name="id" value=""/>
+    <br> <br>
+
+    <input placeholder="有效起期(格式如20120808)"
+           style="border: 1px solid #ccc;width: 200px;/*身份号码:*/
+    height: 38px;
+    border-radius: 10px; /*圆角矩形*/
+    text-indent: 10px; /*里面隐形的字体首行缩进*/
+    margin: 5px auto;" type="text" id="validitystart-input" name="id" value=""/>
+    <br> <br>
+
+    <input placeholder="有效止期"
+           style="border: 1px solid #ccc;width: 200px;/*身份号码:*/
+    height: 38px;
+    border-radius: 10px; /*圆角矩形*/
+    text-indent: 10px; /*里面隐形的字体首行缩进*/
+    margin: 5px auto;" type="text" id="validityend-input" name="id" value=""/>
     <br> <br>
 
     <button class="bubbly-button"
@@ -126,19 +172,18 @@
 
 <div style=" position: relative; letter-spacing: 0px;top: 0;left: 200px;color:#3c3c3c">
     <img style="z-index: -2000" src="sfz.png" id="changeImg" alt="身份证图片"/>
-    <div class="fontclass2"><span id="name"
-                                  style="position: absolute;font-size: 33px;letter-spacing:0px;top:115;left:235; ">汤婷秀</span>
-    </div>
-    <div class="fontclass2"><span id="sex" style="position: absolute;font-size: 30px;top:190;left:235;">女</span></div>
-    <div><span style="position: absolute;font-size: 30px; top: 268px; left: 235px;"><p hidden="hidden">1994</p></span>
-    </div>
-    <div><span style="position: absolute;font-size: 30px; top: 344px; left: 235px;"><p
-            hidden="hidden">广东省 深圳市 南山区</p></span></div>
-    <div class="fontclass"><span id="id" style="position: absolute;font-size: 45px;top: 533;left: 370;color: #575757;">130531198302111820</span>
+    <div class="fontclass2"><span id="name" style="position: absolute;font-size: 33px;letter-spacing:0px;top:115px;left:235px; ">汤婷秀</span></div>
+    <div class="fontclass2"><span id="sex" style="position: absolute;font-size: 30px;top:190px;left:235px;">女</span></div>
+    <div style="position: absolute;font-size: 30px; top: 264px; left: 235px;"><span id="birthyear">1994</span><span id="birthmonth" style="position: absolute;left: 147px">8</span><span id="birthday" style="position: absolute;left: 235px">8</span></div>
+    <div><span id="address" style="position: absolute;font-size: 30px; top: 344px; left: 235px; width: 385px;">广东省深圳市南山区一二路三四五六号巷</span></div>
+    <div class="fontclass"><span id="idnumber" style="position: absolute;font-size: 45px;top: 533px;left: 370px;color: #575757;">130531198302111820</span>
     </div>
 </div>
-<img style="position: relative;left: 200px;z-index: -2000" src="sfzbg.png" alt="身份证背面图片"/>
-
+<div>
+    <img style="position: relative;left: 200px;z-index: -2000" src="sfzbg.png" alt="身份证背面图片"/>
+    <div class="fontclass2"><span id="signoffice" style="position: absolute;font-size: 33px;letter-spacing:0px;top:1135px;left:655px; ">武汉市公安局新洲分局</span></div>
+    <div class="fontclass2"><span id="validity" style="position: absolute;font-size: 33px;letter-spacing:0px;top:1210px;left:660px; ">2001.04.05—2021.04.05</span></div>
+</div>
 </body>
 
 </html>
